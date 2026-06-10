@@ -1,0 +1,26 @@
+services:
+  react-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5173:5173"
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
+
+  react-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: about_me
+    ports:
+      - "8081:8081"
+
+  react-test:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: ["npm", "run", "test"]
