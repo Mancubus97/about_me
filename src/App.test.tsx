@@ -4,7 +4,7 @@ import App from "./App";
 describe("App Component", () => {
   it("renders without crashing", () => {
     render(<App />);
-    expect(screen.getByText(/about me/i)).toBeInTheDocument();
+    expect(screen.getByText(/Silvijn/i)).toBeInTheDocument();
   });
 
   // it("renders all major sections", () => {
