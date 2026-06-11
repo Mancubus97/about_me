@@ -1,7 +1,9 @@
+import logo from '../assets/logo.jpg'
+
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <h1>Logo</h1>
+      <img src={logo} alt="Logo" className="navbar-logo" />
     </nav>
   );
 }
