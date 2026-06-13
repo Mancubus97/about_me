@@ -19,7 +19,6 @@ const ProjectsSection = (props: ProjectsSectionProps) => {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <ImageSlideshow images={project.pics ?? []} title={project.title} />
-
                 <p>Tags: {project.tags.join(', ')}</p>
                 <a href={project.repo} target="_blank" rel="noopener noreferrer">Repository</a>
                 <div>

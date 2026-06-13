@@ -206,6 +206,25 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.projects-preview {
+  flex: 1;
+  min-width: 120px;
+  padding: 40px;
+  border-radius: 20px;
+  /* background: rgba(255, 255, 255, 0.6); */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.projects-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.42);
+}
+
+
+
 .project:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.42);
@@ -256,10 +275,24 @@
 .project-row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex_start;
   gap: 24px;
   margin: 32px 0;
   flex-wrap: wrap;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;  /* ← moves to right */
+  gap: 24px;
+  margin: 32px 0;
+  flex-wrap: wrap;
+  /* remove padding-right */
+
+  @media (max-width: 1024px) {
+    /* responsive adjustment if needed */
+  }
 }
 
 .project-slideshow {
@@ -293,7 +326,7 @@
   align-items: center;
   justify-content: center;
   gap: 32px;
-  padding: 16px 0;
+  padding: 40px 0;
 }
 
 .navbar-logo-btn {

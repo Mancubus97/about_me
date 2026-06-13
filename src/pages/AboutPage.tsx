@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import HeroSection from '../components/HeroSection.tsx'
 import AboutSection from '../components/AboutSection.tsx'
 import SkillsSection from '../components/SkillsSection.tsx'
@@ -11,6 +12,16 @@ import plants2 from '../assets/plants2.jpg'
 
 export default function AboutPage() {
   const navigate = useNavigate()
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1)
+    if (hash) {
+      const element = document.getElementById(hash)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }, [])
 
 
   const project: Project = 
@@ -29,16 +40,17 @@ export default function AboutPage() {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
-      <div style={{ margin: '32px 0', textAlign: 'center' }}>
-      <div className="project">
-        <ImageSlideshow images={project.pics ?? []} title={project.title} />
-      </div>
+      <div className="project-row">
+        <div className="projects-preview project-slideshow">
+          <ImageSlideshow images={project.pics ?? []} title={project.title} />
+        </div>
 
-
-        <button className="nav-button" onClick={() => navigate('/projects')}>
-            Projects
+        <button className="nav-button project-button" onClick={() => navigate('/projects')}>
+          Projects
         </button>
       </div>
+      <div className="spacer" style={{ height: '150px' }}></div>
+      <a href="#contact"></a>
       <ContactSection />
     </>
   )
