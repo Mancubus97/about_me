@@ -6,7 +6,13 @@ export default function Navbar() {
   return (
     <>
     <nav className="navbar">
-      <img src={logo_v4} alt="Logo" className="navbar-logo"  onClick={(e) => { e.preventDefault(); navigate('/'); }} />
+      <button 
+        className="navbar-logo-btn" 
+        onClick={() => navigate('/')}
+        style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+      >
+        <img src={logo_v4} alt="Logo" className="navbar-logo" />
+      </button>
       <div className="navbar-links">
         <a href="#home" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
           About
