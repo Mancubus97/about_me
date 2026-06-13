@@ -257,14 +257,23 @@
   padding: 16px 0;
 }
 
-.navbar-logo {
+.navbar-logo-btn {
   position: absolute;
+  top: 0;
   left: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.navbar-logo {
   width: 322px;
   height: 122px;
   object-fit: cover;
   border-radius: 12px;
-  padding-top: 30px;
+  display: block;
 }
 .navbar-links {
   flex: 1;
@@ -282,4 +291,15 @@
 
 .navbar-links a:hover {
   opacity: 0.7;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 48px;
+  @media (max-width: 1024px) {
+    padding: 32px 24px;
+    gap: 18px;
+  }
 }

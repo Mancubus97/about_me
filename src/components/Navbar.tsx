@@ -8,10 +8,8 @@ export default function Navbar() {
     <nav className="navbar">
       <button 
         className="navbar-logo-btn" 
-        onClick={() => navigate('/')}
-        style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
-      >
-        <img src={logo_v4} alt="Logo" className="navbar-logo" />
+        onClick={() => navigate('/')}>
+          <img src={logo_v4} alt="Logo" className="navbar-logo" />
       </button>
       <div className="navbar-links">
         <a href="#home" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
