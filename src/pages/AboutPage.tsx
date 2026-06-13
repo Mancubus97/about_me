@@ -1,36 +1,24 @@
+import { useNavigate } from 'react-router-dom'
 import HeroSection from '../components/HeroSection.tsx'
 import AboutSection from '../components/AboutSection.tsx'
 import SkillsSection from '../components/SkillsSection.tsx'
-import ProjectsSection from '../components/ProjectsSection.tsx'
 import ContactSection from '../components/ContactSection.tsx'
-import type { Project } from '../types/project.ts';
-
-
-const projects: Project[] = [
-  {
-    title: 'Project 1',
-    description: 'Description of project 1',
-    tags: ['React', 'TypeScript'],
-    repo: ' ',
-    live: ' '
-  },
-  {
-    title: 'Project 2',
-    description: 'Description of project 2',
-    tags: ['Node.js', 'Express'],
-    repo: ' ',
-    live: ' '
-  }
-];
-
+import pictureOfMe from '../assets/picture_of_me.jpg'
 
 export default function AboutPage() {
+  const navigate = useNavigate()
+
   return (
     <>
+      <img src={pictureOfMe} alt="Picture of Me" className="" />
       <HeroSection />
       <AboutSection />
       <SkillsSection />
-      <ProjectsSection projects={projects} />
+      <div style={{ margin: '32px 0', textAlign: 'center' }}>
+        <button className="nav-button" onClick={() => navigate('/projects')}>
+            Projects
+        </button>
+      </div>
       <ContactSection />
     </>
   )

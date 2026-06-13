@@ -4,4 +4,5 @@ export type Project = {
   tags: string[]
   repo: string
   live?: string
+  pics: string[]
 };
