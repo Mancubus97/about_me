@@ -241,11 +241,50 @@
   padding: 14px 28px;
   border-radius: 999px;
   border: none;
-  background: #00eeff;
+  background: #38a5ff;
   color: #ffffff;
   cursor: pointer;
   font-weight: 700;
   font-size: 1rem;
+}
+
+.nav-button:hover{
+  background: #1e8ed9;
+  opacity: 0.9;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 32px 0;
+  flex-wrap: wrap;
+}
+
+.project-slideshow {
+  flex: 1 1 320px;
+  max-width: 600px;
+}
+
+.project-button {
+  flex: 0 0 auto;
+  align-self: center;
+  min-width: 160px;
+    padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  background: #38a5ff;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column;
+  }
 }
 
 .navbar {
@@ -303,3 +342,5 @@
     gap: 18px;
   }
 }
+
+
