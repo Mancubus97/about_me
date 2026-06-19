@@ -11,6 +11,7 @@ import plants2 from './assets/plants2.jpg'
 import plants3 from './assets/plants3.jpg'
 import plants4 from './assets/plants4.jpg'
 import Footer from './components/Footer.tsx'
+import CircuitBackground from './components/CircuitBackground.tsx'
 
 
 const projects: Project[] = [
@@ -68,6 +69,7 @@ function App() {
 
   return (
     <>
+    <CircuitBackground />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
