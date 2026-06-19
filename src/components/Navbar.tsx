@@ -18,7 +18,7 @@ export default function Navbar() {
         <a href="#projects" onClick={(e) => { e.preventDefault(); navigate('/projects'); }}>
           Projects
         </a>
-        <a href="#contact" onClick={(e) => { navigate('/#contact'); }}>
+        <a href="#contact" onClick={(e) => { e.preventDefault(); navigate('/#contact'); }}>
           Contact
         </a>
       </div>
