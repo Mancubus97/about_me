@@ -1,9 +1,4 @@
-import React from 'react';
-import ImageSlideshow from './ImageSlideshow.tsx';
-import type { Project } from '../types/project.ts'
-import plants1 from '../assets/plants1.jpg'
-import plants2 from '../assets/plants2.jpg'
-import { useNavigate } from 'react-router-dom'
+
 
 export default function ContactSection() {
   return (
