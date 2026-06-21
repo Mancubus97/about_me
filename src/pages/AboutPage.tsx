@@ -8,7 +8,11 @@ import pictureOfMe from '../assets/picture_of_me.jpg'
 import type { Project } from '../types/project.ts'
 import ImageSlideshow from '../components/ImageSlideshow.tsx'
 import plants1 from '../assets/plants1.jpg'
-import plants2 from '../assets/plants2.jpg'
+import kappersapp1 from '../assets/kappersapp1.jpg'
+import quad1 from '../assets/quad1.jpg'
+import WoodWideWeb1 from '../assets/WoodWideWeb1.jpg'
+import crashed1 from '../assets/crashed1.jpg'
+import goodchain2 from '../assets/goodchain2.jpg'
 
 export default function AboutPage() {
   const navigate = useNavigate()
@@ -23,16 +27,14 @@ export default function AboutPage() {
     }
   }, [])
 
-
-  const project: Project = 
-  {
-    title: 'Project 1',
-    description: 'Description of project 1',
+  const project: Project = {
+    title: 'Featured Projects',
+    description: 'A selection of projects I have worked on',
     tags: ['React', 'TypeScript'],
     repo: ' ',
     live: ' ',
-    pics: [plants1, plants2]
-  };
+    pics: [plants1, kappersapp1, quad1, WoodWideWeb1, crashed1, goodchain2]
+  }
 
   return (
     <>
