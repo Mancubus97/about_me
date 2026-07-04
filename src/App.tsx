@@ -5,6 +5,7 @@ import NotFound from './pages/NotFound.tsx'
 //import heroImg from './assets/hero.png'
 import './App.css'
 import ProjectsSection from './components/ProjectsSection.tsx'
+import ProjectView from './components/ProjectView.tsx'
 import type { Project } from './types/project.ts'
 import plants1 from './assets/plants1.jpg'
 import plants2 from './assets/plants2.jpg'
@@ -89,6 +90,7 @@ const projects: Project[] = [
   }
 ];
 
+
 function App() {
 
   return (
@@ -100,7 +102,9 @@ function App() {
             <Route index element={<AboutPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
-          <Route path="/projects" element={<ProjectsSection projects={projects} />} />
+          <Route path="/projects" element={<ProjectsSection projects={projects} />}>
+          </Route>
+             <Route path="/projects/:id" element={<ProjectView projects={projects} />} />
         </Routes>
       </BrowserRouter>
       <Footer />

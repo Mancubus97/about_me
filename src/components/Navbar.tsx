@@ -12,13 +12,13 @@ export default function Navbar() {
           <img src={logo_v4} alt="Logo" className="navbar-logo" />
       </button>
       <div className="navbar-links">
-        <a href="#home" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
+        <a className="default-text" href="#home" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
           About
         </a>
-        <a href="#projects" onClick={(e) => { e.preventDefault(); navigate('/projects'); }}>
+        <a className="default-text" href="#projects" onClick={(e) => { e.preventDefault(); navigate('/projects'); }}>
           Projects
         </a>
-        <a href="#contact" onClick={(e) => { e.preventDefault(); navigate('/#contact'); }}>
+        <a className="default-text" href="#contact" onClick={(e) => { e.preventDefault(); navigate('/#contact'); }}>
           Contact
         </a>
       </div>

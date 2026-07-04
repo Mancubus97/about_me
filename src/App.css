@@ -1,3 +1,19 @@
+.default-text{
+  font-family: 'Inter', monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: hwb(216 71% 11%);
+  letter-spacing: -0.02em;
+}
+
+.default-header {
+  font-family: 'Inter', monospace;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color:  hwb(216 53% 2%);
+  letter-spacing: -0.02em;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -304,11 +320,11 @@
   flex: 0 0 auto;
   align-self: center;
   min-width: 160px;
-    padding: 14px 28px;
+  padding: 14px 28px;
   border-radius: 999px;
   border: none;
   background: #38a5ff;
-  color: #ffffff;
+  color: hwb(0 88% 12%);
   cursor: pointer;
   font-weight: 700;
   font-size: 1rem;
@@ -376,4 +392,58 @@
   }
 }
 
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.project-tags span,
+.project-tags .project-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(56, 165, 255, 0.16), rgba(56, 165, 255, 0.08));
+  color: hwb(216 53% 2%);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(56, 165, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-tags span:hover,
+.project-tags .project-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+  border-color: rgba(56, 165, 255, 0.35);
+}
+
+
+.project-title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin: 0 0 16px;
+  text-align: center;
+  color: hwb(216 53% 2%);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.project-title::after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin: 10px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #38a5ff, #1e8ed9);
+}
 
