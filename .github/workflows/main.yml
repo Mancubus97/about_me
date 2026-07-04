@@ -53,7 +53,10 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
 
-      - name: Install dependencies
+      - name: Install dependencies(1)
+        run: npm install
+        
+      - name: Install dependencies(2)
         run: npm ci
 
       - name: Run tests
